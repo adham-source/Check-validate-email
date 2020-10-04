@@ -1,0 +1,166 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-shadow : 0 0 .7rem rgba(0, 0, 0, .2);
+}
+
+body {
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+/*!-- Start validate email --*/
+.validate-email {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: #f2f2f2;
+}
+
+.form-content {
+    max-width: 19.5rem;
+    background: #fff;
+    box-shadow: var(--main-shadow);
+    padding: 1rem .5rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.form-content .form-title {
+    color: #191919;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    font-weight: 600;
+    background: linear-gradient(to left, #e74c3c, #27ae60, #e74c3c);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    text-shadow: var(--main-shadow);
+}
+
+.form-content .form {
+    margin: 1rem .5rem;
+}
+
+.form-content .form .field-content {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    position: relative;
+}
+
+.form .field-content .input-field {
+    width: 100%;
+    height: 100%;
+    font-size: 1.3rem;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: .5rem;
+    padding-left: 1rem;
+    padding-right: 3.1rem;
+}
+
+.field-content .icons-field {
+    
+    color: #ccc;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.icons-field span {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s;
+}
+
+.icons-field span.icon-exclamation {
+    color: #e74c3c;
+    border-color: #e74c3c;
+    visibility: visible;
+    opacity: 0;
+}
+
+.icons-field span.icon-check {
+    color: #27ae60;
+    border-color: #27ae60;
+    opacity: 0;
+}
+
+.icons-field span.icon-envelope {
+    border: none
+}
+
+.form .error-text {
+    color: #f2f2f2;
+    font-size: 1.3rem;
+    background: #e74c3c;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    border-radius: .5rem;
+    margin: .7rem 0;
+    position: relative;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.form .error-text::after {
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background: #e74c3c;
+    top: -.5rem;
+    right: 1.5rem;
+    transform: rotate(45deg);
+}
+
+.form .btn-submit {
+    width: 100%;
+    height: 3rem;
+    color: #f2f2f2;
+    background: #27ae60;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all .3s;
+    opacity: .8;
+    display: none;
+}
+
+.form .btn-submit:hover {
+    box-shadow: var(--main-shadow);
+    opacity: 1;
+}
+/*Start media query*/
+@media screen and (min-width: 425px) {
+    .form-content {
+        max-width: 25rem;
+    }
+}
+/*!-- End validate email --*/

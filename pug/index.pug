@@ -1,0 +1,42 @@
+doctype html
+html(lang = 'en' dir = 'ltr')
+    head
+        meta(charset = 'UTF-8' '')/
+        meta(name = 'viewport' content = 'width=device-width, initial-scale=1, shrink-to-fit=no' '')/
+        include ./../includes/styles.pug
+        title Validate email
+    body
+        // Start validate email 
+        section(class = 'validate-email')
+            div(class = 'form-content')
+                h3(class = 'form-title') Check validate email
+                form(class = 'form' action = 'index.html' method = 'GET')
+                    div(class = 'field-content')
+                        input(
+                            id = 'email'
+                            class = 'input-field'
+                            type = 'email'
+                            name = 'email'
+                            value = ''
+                            placeholder = 'Enter email address'
+                            autocomplete = 'off' 
+                            ''
+                        )/
+                        div(class = 'icons-field')
+                            |
+                            |
+                            span(class = 'icon-exclamation fas fa-exclamation')
+                            |
+                            |
+                            span(class = 'icon-check fas fa-check')
+                            |
+                            |
+                            span(class = 'icon-envelope fas fa-envelope')
+                    div(class = 'error-text') Please enter valid email
+                    button(
+                        class = 'btn-submit'
+                        type = 'submit'
+                    ) Submit
+        // End validate email 
+
+        include ./../includes/scripts.pug
