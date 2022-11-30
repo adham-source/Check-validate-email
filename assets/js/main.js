@@ -6,6 +6,7 @@ const iconEnvelope = document.querySelector('.icon-envelope');
 const erroText = document.querySelector('.error-text');
 const btnSubmit = document.querySelector('.btn-submit');
 //let regExp = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; // bad validate
+// /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/ === very good
 let regExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/; // regExp very good to valid email
 
 inputEmail.addEventListener('input', () => {
